@@ -1,6 +1,5 @@
 local pairs = pairs
 local insert = table.insert
-local queries = require("luarocks.queries")
 
 local rover_rockspec = require('rover.rockspec')
 local _M = {
@@ -13,8 +12,7 @@ function _M.call(lock)
     local dependencies = {}
 
     for name, spec in pairs(index) do
-        local query = queries.new(name, nil, spec.version, false, "src|rockspec")
-        local rockspec = rover_rockspec.find(query)
+        local rockspec = rover_rockspec.find(name, spec.version)
 
         insert(dependencies, {
             name = name,

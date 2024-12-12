@@ -3,15 +3,13 @@ local tostring = tostring
 
 local path = require('luarocks.path')
 local fs = require('luarocks.fs')
-local cfg = require("luarocks.core.cfg")
+local cfg = require("luarocks.cfg")
 
 local mt = { }
 local _M = setmetatable({
     tree = 'lua_modules'
 }, mt)
 
-cfg.init()
-fs.init()
 
 local __index = {
   rockspec_file = path.rockspec_file,
