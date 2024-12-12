@@ -1,11 +1,11 @@
-package = "lua-rover"
+package = "lua-rover-old"
 version = "scm-1"
 source = {
-   url = "git+https://github.com/3scale/lua-rover.git",
+   url = "git+https://github.com/AlexBaranowski/lua-rover-old.git",
    branch = "master"
 }
 description = {
-   homepage = "https://github.com/3scale/lua-rover",
+   homepage = "https://github.com/AlexBaranowski/lua-rover-old",
    license = "Apache-2.0"
 }
 dependencies = {
